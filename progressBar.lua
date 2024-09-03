@@ -14,16 +14,14 @@ local fg = "0"
 local mouseX, mouseY = term.getCursorPos()
 term.setCursorPos(termWidth/2-barWidth/2, mouseY)
 term.blit(emptyChar:rep(barWidth), bg:rep(barWidth), fg:rep(barWidth))
-term.setCursorPos(termWidth/2-barWidth/2, mouseY)
-
-local tickWidth = math.floor(1 / #table * barWidth)
 
 -- Iterates through the table and performs an action.
 for i=1, #table do
 	os.sleep(1)
 
 -- Draws 'full characters' to the progress bar as the action finishes.
-	term.blit(fullChar:rep(tickWidth), bg:rep(tickWidth), fg:rep(tickWidth))
+	term.setCursorPos(termWidth/2-barWidth/2, mouseY)
+	term.blit(fullChar:rep(math.floor(i / #table * barWidth)), bg:rep(math.floor(i / #table * barWidth)), fg:rep(math.floor(i / #table * barWidth)))
 end
 
 print(" Done!")
