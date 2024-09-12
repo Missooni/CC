@@ -1,0 +1,2 @@
+    > This is text in a file, contained in a markdown blockquote.
+    -and this text is not in a blockquote!
