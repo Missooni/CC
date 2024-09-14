@@ -1,5 +1,5 @@
 -- Define or alias values using a table. I'm using strings for this example.
-local table = {"val1","val2","val3","val4","val5"}
+local barTable = {"val1","val2","val3","val4","val5"}
 
 local termWidth, termHeight = term.getSize()
 
@@ -16,7 +16,7 @@ term.setCursorPos(termWidth/2-barWidth/2, mouseY)
 term.blit(emptyChar:rep(barWidth), bg:rep(barWidth), fg:rep(barWidth))
 
 -- Iterates through the table and performs an action.
-for i=1, #table do
+for key, value in pairs(barTable) do
 	os.sleep(1)
 
 -- Draws 'full characters' to the progress bar as the action finishes.
