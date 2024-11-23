@@ -1,2 +1,2 @@
 # ComputerCraft Code Snippets
-Standalone programs and/or APIs I've made for ComputerCraft
+Standalone programs and/or libraries I've made for ComputerCraft
